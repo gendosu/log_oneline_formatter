@@ -3,19 +3,19 @@ module LogOnelineFormatter
   class Formatter
     def initialize(target = ::Logger::Formatter)
       target.class_eval do
-        def msg2str_no_line_end(msg)
-          msg2str_without_no_line_end(msg.gsub(/\n/, '\n'))
+        def call_no_line_end(severity, time, progname, msg)
+          call_without_no_line_end(severity, time, progname, msg.gsub(/\n/, '\n'))
         end
 
-        alias_method :msg2str_without_no_line_end, :msg2str
-        alias_method :msg2str, :msg2str_no_line_end
+        alias_method :call_without_no_line_end, :call
+        alias_method :call, :call_no_line_end
       end
 
       @target = target.new
     end
 
-    def call(*arg)
-      @target.call(*arg)
+    def call(severity, time, progname, msg)
+      @target.call(severity, time, progname, msg)
     end
   end
 end
