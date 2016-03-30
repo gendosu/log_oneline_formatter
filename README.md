@@ -26,7 +26,7 @@ TODO: Write usage instructions here
 
 in application.rb or other
 config.logger = Logger.new "#{Rails.root.join('log', Rails.env)}.log"
-config.logger.formatter = LogOnelineFormatter::Formatter.new(::Logger::Formatter)
+config.log_formatter = LogOnelineFormatter::Formatter.new(::Logger::Formatter)
 
 ## Development
 
