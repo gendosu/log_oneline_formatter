@@ -1,5 +1,4 @@
 module LogOnelineFormatter
-  # Default formatter for log messages.
   class Formatter
     def initialize(target = ::Logger::Formatter)
       target.class_eval do
