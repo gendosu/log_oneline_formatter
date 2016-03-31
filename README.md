@@ -1,8 +1,7 @@
 # LogOnelineFormatter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/log_oneline_formatter`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a very simple remove line end from multi line log for Rails.
+Such as ActiveRecord::RecordNotFound, Routing Error and more.
 
 ## Installation
 
@@ -22,18 +21,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
 in application.rb or other
+```
 config.logger = Logger.new "#{Rails.root.join('log', Rails.env)}.log"
 config.log_formatter = LogOnelineFormatter::Formatter.new(::Logger::Formatter)
+```
 
 ## Development
 
+```
 rails new sample
 cd sample
 git clone https://github.com/gendosu/log_oneline_formatter
 echo "gemspec path: 'log_oneline_formatter'" > Gemfile
+```
 
 ## Contributing
 
