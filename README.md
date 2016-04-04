@@ -1,4 +1,4 @@
-https://travis-ci.org/gendosu/log_oneline_formatter.svg?branch=master
+![status image](https://travis-ci.org/gendosu/log_oneline_formatter.svg?branch=master)
 
 # LogOnelineFormatter
 
