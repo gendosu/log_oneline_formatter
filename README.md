@@ -1,3 +1,5 @@
+https://travis-ci.org/gendosu/log_oneline_formatter.svg?branch=master
+
 # LogOnelineFormatter
 
 This gem is a very simple remove line end from multi line log for Rails.
